@@ -1,0 +1,13 @@
+#PBS -j oe
+#PBS -N DevCompression
+#PBS -m a
+#PBS -m b
+#PBS -o $HOME/scratch/Dev_Compression/Devo_phototaxis_$ARG_SEED.log
+#PBS -M skriegma@uvm.edu
+#PBS -l nodes=1:ppn=20,pmem=2gb,pvmem=2gb
+#PBS -l walltime=03:00:00
+#PBS -q shortq
+
+PATH=$HOME/anaconda/bin:$PATH
+cd $HOME/pkg/pyrosim/
+PYTHONPATH=$HOME/pkg/pyrosim/ $HOME/anaconda/bin/python ./Evo_single_run.py $ARG_SEED
