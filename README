@@ -1,0 +1,1 @@
+Each folder in the final code directory represents a different experimental design. evolution.py in each starts the simulation. There is also code in evolution.py to pickle populations and save data to csv. evolution.py may need to be edited in order to run evolution as it is currently set to just write to csv.
